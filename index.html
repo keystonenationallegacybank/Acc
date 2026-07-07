@@ -90,8 +90,6 @@ header{
     top:0;
     z-index:2000;
     background:rgba(0,43,91,0.85);
-    -webkit-backdrop-filter:blur(14px);
-
     backdrop-filter:blur(14px);
     padding:18px 5%;
     display:flex;
@@ -194,8 +192,6 @@ nav a:hover{
 .hero-card{
     background:rgba(255,255,255,0.1);
     border:1px solid rgba(255,255,255,0.15);
-    -webkit-backdrop-filter:blur(12px);
-
     backdrop-filter:blur(12px);
     border-radius:35px;
     padding:35px;
@@ -1221,8 +1217,6 @@ style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-ind
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function(){
-try{
 let currentBalance = 1080000;
 let notifications = [];
 
@@ -1429,7 +1423,7 @@ function logout(){
     if(confirm(
         "Sign out of Keystone National Legacy Bank?"
     )){
-        window.location.href = window.location.href.split('#')[0];
+        location.reload();
     }
 }
 
@@ -1457,8 +1451,6 @@ function registerUser(){
 
     showLogin();
 }
-}catch(e){console.error(e);}
-});
 
 </script>
 
